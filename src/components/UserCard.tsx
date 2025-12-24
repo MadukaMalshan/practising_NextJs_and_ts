@@ -7,9 +7,9 @@ export default function UserCard({
 }: UserCardProps) {
     return(
         <div className="border rounded">
-            <h2>Name : {name}</h2>
-            <p>Age : {age}</p>
-            <p>Status : {isActive ? "Active" : "Inactive"}</p>
+            <h2 className="user-name">Name : {name}</h2>
+            <p className="user-age">Age : {age}</p>
+            <p className="user-status">Status : {isActive ? "Active" : "Inactive"}</p>
         </div>
     )
 }
