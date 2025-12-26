@@ -1,16 +1,42 @@
 @import "tailwindcss";
-@import "tailwindcss/preflight";
-@tailwind utilities;
 
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'); */
+@theme {
+    --font-sans: 'Inter', sans-serif;
+    --color-primary: #4f46e5;
+    /* indigo-600 */
+    --color-primary-foreground: #ffffff;
+
+    --animate-fade-in-up: fadeInUp 0.5s ease-out forwards;
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Fallback for Inter font if google fonts fails or is commented out */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+}
 
 @layer base {
-  html {
-    font-family: 'Inter', sans-serif;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    @apply bg-slate-50 text-slate-900 antialiased;
-  }
+    html {
+        font-family: var(--font-sans);
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-slate-50 text-slate-900 antialiased;
+    }
 }
