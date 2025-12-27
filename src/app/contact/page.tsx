@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 export default function ContactPage() {
@@ -8,6 +9,7 @@ export default function ContactPage() {
   ];
 
   return (
+    <>
     <div className="bg-slate-50 min-h-screen">
       <Navbar />
 
@@ -126,5 +128,7 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }

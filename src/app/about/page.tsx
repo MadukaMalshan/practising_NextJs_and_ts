@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 export default function AboutPage() {
@@ -35,6 +36,7 @@ export default function AboutPage() {
   ];
 
   return (
+    <>
     <div className="bg-slate-50 min-h-screen">
       <Navbar />
 
@@ -130,5 +132,7 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
