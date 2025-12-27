@@ -1,6 +1,7 @@
 import UserCard from '@/components/UserCard'
 import Navbar from '@/components/Navbar'
 import Link from 'next/link'
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const users = [
@@ -13,7 +14,7 @@ export default function Home() {
     <>
       <Navbar />
 
-      {/* Hero Section */}
+      {/*Hero_Section*/}
       <section className="relative overflow-hidden bg-white pt-24 pb-32 lg:pt-40 lg:pb-48">
         <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-30"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -53,7 +54,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Main_Content */}
       <main className="bg-slate-50/50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
@@ -84,7 +85,7 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Stats Section */}
+          {/* Stats_Section */}
           <div className="relative rounded-3xl overflow-hidden bg-slate-900 text-white p-12 lg:p-16">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 to-blue-600/20"></div>
             <div className="relative grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
@@ -106,16 +107,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-slate-200 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-slate-500 text-sm">© 2024 MyWebsite. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="text-slate-400 hover:text-slate-600 transition-colors">Twitter</a>
-            <a href="#" className="text-slate-400 hover:text-slate-600 transition-colors">GitHub</a>
-            <a href="#" className="text-slate-400 hover:text-slate-600 transition-colors">LinkedIn</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   )
 }
