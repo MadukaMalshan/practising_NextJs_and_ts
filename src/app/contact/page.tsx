@@ -1,11 +1,12 @@
+import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 export default function ContactPage() {
   const contactInfo = [
-    { icon: "📧", label: "Email", value: "contact@example.com", link: "mailto:contact@example.com" },
-    { icon: "📱", label: "Phone", value: "+1 (555) 123-4567", link: "tel:+15551234567" },
-    { icon: "📍", label: "Location", value: "San Francisco, CA", link: "#" }
+    { icon: "📧", label: "Email", value: "malshanmaduka8@gmail.com", link: "mailto:malshanmaduka8@gmail.com" },
+    { icon: "📱", label: "Phone", value: "+94764673284", link: "tel:+94764673284" },
+    { icon: "📍", label: "Location", value: "Colombo, Sri Lanka", link: "https://maps.app.goo.gl/DA2LUU3pstz1piNr8" }
   ];
 
   return (
@@ -59,7 +60,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="text"
-                      placeholder="John Doe"
+                      placeholder="Enter your name"
                       className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:bg-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 outline-none transition-all duration-200"
                       required
                     />
@@ -70,7 +71,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="email"
-                      placeholder="john@example.com"
+                      placeholder="abc@gmail.com"
                       className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:bg-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 outline-none transition-all duration-200"
                       required
                     />
@@ -101,12 +102,7 @@ export default function ContactPage() {
                   ></textarea>
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full bg-slate-900 hover:bg-indigo-600 text-white font-bold text-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-0.5 transition-all duration-300 active:translate-y-0"
-                >
-                  Send Message
-                </button>
+                <Button text="Send Message" />
               </form>
             </div>
           </div>

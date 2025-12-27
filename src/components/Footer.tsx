@@ -6,9 +6,9 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-slate-500 text-sm">© {new Date().getFullYear()} MyWebsite. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="text-slate-400 hover:text-slate-600 transition-colors">Instagram</a>
-            <a href="#" className="text-slate-400 hover:text-slate-600 transition-colors">GitHub</a>
-            <a href="#" className="text-slate-400 hover:text-slate-600 transition-colors">LinkedIn</a>
+            <a href="https://www.instagram.com/___.maduka.___/" className="text-slate-400 hover:text-slate-600 transition-colors">Instagram</a>
+            <a href="https://github.com/MadukaMalshan" className="text-slate-400 hover:text-slate-600 transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/maduka-malshan/" className="text-slate-400 hover:text-slate-600 transition-colors">LinkedIn</a>
           </div>
         </div>
     </footer>
