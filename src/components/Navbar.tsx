@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Button from "./Button";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -51,11 +52,7 @@ export default function Navbar() {
             </ul>
             
             <div className="pl-8 border-l border-slate-200">
-              <Link href="/login">
-              <button className="px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0">
-                Sign In
-              </button>
-              </Link>
+              <Button href="/login" text="Sign In" />
             </div>
           </div>
           
