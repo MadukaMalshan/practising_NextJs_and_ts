@@ -1,5 +1,5 @@
-import { UserCardProps } from "../types";
 import Link from "next/link";
+import { UserCardProps } from "../types/userCardType";
 
 export default function UserCard({
     id,

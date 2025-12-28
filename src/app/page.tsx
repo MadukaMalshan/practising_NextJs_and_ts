@@ -75,8 +75,11 @@ export default function Home() {
                 key={user.id}
                 id={user.id}
                 name={user.name}
+                role={user.role}
                 age={user.age}
-                isActive={user.isActive}             
+                isActive={user.isActive}
+                bio={user.bio}
+                email={user.email}             
                  />
             ))}
           </div>

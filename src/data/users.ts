@@ -1,15 +1,5 @@
-
-export type User = {
-    id: string;
-    name: string;
-    role: string;
-    age: number;
-    isActive: boolean;
-    bio: string;
-    email: string; // Adding email as it's common
-};
-
-export const users: User[] = [
+import { UserCardProps } from "../types/userCardType";
+export const users: UserCardProps[] = [
     {
         id: "1",
         name: "John Doe",
