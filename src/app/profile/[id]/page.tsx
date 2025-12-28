@@ -7,8 +7,9 @@ type Props = {
   };
 };
 
-export default function ProfilePage({ params }: Props) {
-  const user = users.find(u => u.id === params.id);
+export default async function ProfilePage({ params }: Props) {
+  const { id } = await params;
+  const user = users.find(u => u.id === id);
 
   if (!user) return notFound();
 
