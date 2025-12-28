@@ -55,7 +55,7 @@ export default function LoginPage() {
 
           <div className="flex flex-col gap-5 pt-2">
             <div className="w-full [&>button]:w-full [&>a]:w-full [&>a>button]:w-full">
-              <Button href="/" text="Sign In" />
+              <Button href="/dashboard" text="Sign In" />
             </div>
 
             <p className="text-center text-sm text-slate-500">
