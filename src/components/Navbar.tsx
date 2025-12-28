@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { href: "/", label: "Home" },
+    { href: "/dashboard", label: "Home" },
     { href: "/contact", label: "Contact" },
     { href: "/about", label: "About" }
   ];
