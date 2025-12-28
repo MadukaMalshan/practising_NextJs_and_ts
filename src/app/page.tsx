@@ -2,14 +2,9 @@ import UserCard from '@/components/UserCard'
 import Navbar from '@/components/Navbar'
 import Link from 'next/link'
 import Footer from '@/components/Footer';
+import { users } from '@/data/users';
 
 export default function Home() {
-  const users = [
-    {id: "maduka-malshan", name: "Maduka", age: 25, isActive: true },
-    {id: "alex-johnson", name: "Alex Johnson", age: 28, isActive: true },
-    {id: "sarah-williams", name: "Sarah Williams", age: 26, isActive: false },
-  ];
-
   return (
     <>
       <Navbar />
