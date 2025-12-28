@@ -22,7 +22,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/dashboard" className="flex items-center gap-2.5 group">
+          <Link
+            href="/dashboard"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="flex items-center gap-2.5 group"
+          >
             <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-blue-600 shadow-lg shadow-indigo-500/20 group-hover:shadow-indigo-500/40 transition-all duration-300 group-hover:scale-105">
               <span className="text-white font-bold text-xl">M</span>
               <div className="absolute inset-0 rounded-xl bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -37,25 +41,25 @@ export default function Navbar() {
             <ul className="flex gap-1">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link 
+                  <Link
                     href={link.href}
-                    className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                      isActive(link.href)
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isActive(link.href)
                         ? "text-indigo-600 bg-indigo-50"
                         : "text-slate-600 hover:text-indigo-600 hover:bg-slate-50"
-                    }`}
+                      }`}
                   >
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            
+
             <div className="pl-8 border-l border-slate-200">
               <Button href="/login" text="Sign In" />
             </div>
           </div>
-          
+
           {/* Mobile Menu Button (Placeholder) */}
           <button className="md:hidden p-2 text-slate-600 hover:text-slate-900">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
