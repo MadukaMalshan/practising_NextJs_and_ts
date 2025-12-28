@@ -77,11 +77,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
             {users.map((user, index) => (
               <UserCard
+                id={0}
                 key={index}
                 name={user.name}
                 age={user.age}
-                isActive={user.isActive}
-              />
+                isActive={user.isActive}             
+                 />
             ))}
           </div>
 

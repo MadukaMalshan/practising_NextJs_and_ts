@@ -1,6 +1,8 @@
 import { UserCardProps } from "../types";
+import Link from "next/link";
 
 export default function UserCard({
+    id,
     name,
     age,
     isActive = true,
@@ -49,13 +51,16 @@ export default function UserCard({
                         <p className="text-sm font-semibold text-slate-700">User</p>
                     </div>
                 </div>
-
+                
+                <Link href={`/profile/${id}`}>
                 <button className="w-full mt-4 py-2.5 px-4 bg-slate-50 hover:bg-indigo-50 text-slate-600 hover:text-indigo-600 font-medium text-sm rounded-xl border border-slate-200 hover:border-indigo-200 transition-all duration-300 flex items-center justify-center gap-2 group/btn">
                     View Profile
                     <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                 </button>
+                </Link>
+                
             </div>
         </div>
     )
