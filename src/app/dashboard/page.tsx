@@ -61,7 +61,7 @@ export default function Home() {
                 The talented professionals driving our success and innovation forward.
               </p>
             </div>
-            <Link href="/team" className="text-indigo-600 font-semibold hover:text-indigo-700 flex items-center gap-1 group">
+            <Link href="/dashboard/members" className="text-indigo-600 font-semibold hover:text-indigo-700 flex items-center gap-1 group">
               View all members
               <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
