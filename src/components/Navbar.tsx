@@ -4,8 +4,33 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Button from "./Button";
 
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+
 export default function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    // Check for auth_token cookie
+    const checkAuth = () => {
+      const token = document.cookie.split('; ').find(row => row.startsWith('auth_token='));
+      setIsLoggedIn(!!token);
+    };
+
+    checkAuth();
+
+    // Optional: Listen for storage events or interval if needed, but for now simple check on mount
+  }, [pathname]);
+
+  const handleSignOut = () => {
+    // Remove cookie
+    document.cookie = "auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    setIsLoggedIn(false);
+    router.push("/login");
+  };
+
 
   const isActive = (href: string) => {
     return pathname === href;
@@ -45,8 +70,8 @@ export default function Navbar() {
                     href={link.href}
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isActive(link.href)
-                        ? "text-indigo-600 bg-indigo-50"
-                        : "text-slate-600 hover:text-indigo-600 hover:bg-slate-50"
+                      ? "text-indigo-600 bg-indigo-50"
+                      : "text-slate-600 hover:text-indigo-600 hover:bg-slate-50"
                       }`}
                   >
                     {link.label}
@@ -56,7 +81,11 @@ export default function Navbar() {
             </ul>
 
             <div className="pl-8 border-l border-slate-200">
-              <Button href="/login" text="Sign In" />
+              {isLoggedIn ? (
+                <Button onClick={handleSignOut} text="Sign Out" />
+              ) : (
+                <Button href="/login" text="Sign In" />
+              )}
             </div>
           </div>
 
